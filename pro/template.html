@@ -1,7 +1,7 @@
 	<!DOCTYPE html>
 	<html>
 	<head>
-		<title>WanderLust</title>
+		<title>Work Space</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -48,7 +48,30 @@
 	        		font-size: 20px;
 	        		background-color: black;
 	        		opacity: 0.5;
-	        	  }	  	
+	        	  }	 
+	        .dropbtn,.dropbtn2{
+	        	background-color: transparent;
+	        	color: gray;
+	        	padding: 10px;
+	        	border: none;
+	        	text-decoration: none;
+	        	border-color: transparent;
+	        }
+	        .dropdown-content{
+	        	     display: none;
+	        	     position: absolute;
+	        	     color: black;
+	        	     background-color: gray;
+	        	     min-width: 200px;
+	        	     overflow: auto;
+	        	     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	             }
+	        .dropdown-content a {
+	        	color: black;
+	        	padding: 10px;
+	        	text-decoration: none;
+	        	display: block;
+	        }
 	    </style>
 	</head>
 	<body>
@@ -66,10 +89,20 @@
 		<div class="collapse navbar-collapse form-group" id="bs-example-navbar-collapse-1">       
 			<ul class="nav navbar-nav navbar-right" style="font-size: 20px;font-family: 'Permanent Marker', cursive;">         
 				<li><a href="#">Home</a></li>
+				<li class="dropdown"><button id="myBtn" class="dropbtn">log In</button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="loginh.php">I'm a Hire</a>
+						<a href="login.php">I'm freelancer</a>
+					</div>
+			    </li>
+				<li class="dropdown"><button id="myBtn2" class="dropbtn">Sign In</button>
+					<div id="myDropdown2" class="dropdown-content">
+						<a href="hire.html">I'm a Hire</a>
+						<a href="lancer.html">I'm freelancer</a>
+					</div>
+				</li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Contact</a></li>
-				<li><a href="login.php">log In</a></li>
-				<li><a href="lancer.html">Sign In</a></li>
 			</ul>
 		</div>
 	</div>
@@ -227,5 +260,19 @@
 	<br><br><div style="color: white;background-color: black;width: 100%;height: 200px;">
 		<p>Rights Reserved</p> -->
 	<!-- </div> -->
+	<script type="text/javascript">
+		document.getElementById("myBtn").onclick=function(){
+			myFunction();
+		}
+		function myFunction(){
+			document.getElementById("myDropdown").classList.toggle("show");
+		}
+		document.getElementById("myBtn2").onclick=function(){
+			myFunction2();
+		}
+		function myFunction2(){
+			document.getElementById("myDropdown2").classList.toggle("show");
+		}
+	</script>
 	</body>
 	</html>
