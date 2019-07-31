@@ -1,5 +1,5 @@
 <?php
- include "conn.php";
+ include 'conn.php';
 
  $username = $_POST['username'];
  $category= $_POST['category'];
@@ -13,8 +13,8 @@
 $result=mysqli_query($con,$query);
 
   if ($result) {
-  	echo "successfully inserted";
-  	// header('location:template.html');
+  	// echo "successfully inserted";
+  	header("location: insertform.php");
   }
   else{
   	echo "failed to insert";

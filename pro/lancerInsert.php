@@ -13,7 +13,7 @@
   $result=mysqli_query($con,$query);
   if ($result) {
   	// echo "successfully inserted";
-  	header('location:template.html');
+  	header('location:lancerform.html');
   }
   else{
   	echo "failed to insert";

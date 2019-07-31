@@ -12,13 +12,13 @@
     		background-size: cover;
     	}
     	#my-container{
-    					background-color: white;
-    					max-width: 600px;
-    					box-shadow: 0 15px 40px;
-    					margin: auto;
-    					padding: 20px;
-    					margin-top: 90px;
-    				  }
+    		background-color: white;
+    		max-width: 600px;
+    		box-shadow: 0 15px,40px;
+    		margin: auto;
+    		padding: 20px;
+    		margin-top: 90px;
+    	}
     	.dropbtn,.dropbtn2{
 	        	background-color: transparent;
 	        	color: gray;
@@ -45,7 +45,7 @@
     </style>
 </head>
 <body>
-		<nav class="navbar navbar-inverse navbar-fixed-top sticky">   
+<nav class="navbar navbar-inverse navbar-fixed-top sticky">   
 		<div class="container-fluid">      
 			<div class="navbar-header"> 
 		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" ariaexpanded="false">       
@@ -59,14 +59,14 @@
 		<div class="collapse navbar-collapse form-group" id="bs-example-navbar-collapse-1">       
 			<ul class="nav navbar-nav navbar-right" style="font-size: 20px;font-family: 'Permanent Marker', cursive;">         
 			<li><a href="#">Home</a></li>
-				<li class="dropdown"><button id="myBtn" class="dropbtn">log In</button>
-					<div id="myDropdown" class="dropdown-content">
+				<li class="dropdown"><button id="myBtn2" class="dropbtn">log In</button>
+					<div id="myDropdown2" class="dropdown-content">
 						<a href="loginh.php">I'm a Hire</a>
 						<a href="login.php">I'm freelancer</a>
 					</div>
 			    </li>
-				<li class="dropdown"><button id="myBtn2" class="dropbtn">Sign In</button>
-					<div id="myDropdown2" class="dropdown-content">
+				<li class="dropdown"><button id="myBtn" class="dropbtn">Sign In</button>
+					<div id="myDropdown" class="dropdown-content">
 						<a href="hire.html">I'm a Hire</a>
 						<a href="lancer.html">I'm freelancer</a>
 					</div>
@@ -78,33 +78,31 @@
 	</div>
 	</nav>
 <div id="my-container">
-	<form action="lancerInsert.php" method="post">
+	<?php
+ 		if(isset($_GET['message'])){
+ 		  $message=$_GET['message'];
+ 		  ?>
+ 		  <div class="alert alert-danger">
+ 		  	 <?php echo $message;?>
+ 		  </div>
+ 	<?php }
+	?>
+	<form action="verifyh.php" method="post">
+		
 		<div class="form-group">
-			<label for="name">Name</label>
-			<input type="text" class="form-control" name="name" id="Name" placeholder="Enter your name">
-		</div>
-		<div class="form-group">
-			<label for="username">User Name</label>
-			<input type="text" class="form-control" name="username" id="Name" placeholder="Enter your Username">
-		</div>
-		<div class="form-group">
-			<label for="email">Email</label>
+			<label for="email">email</label>
 			<input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
 		</div>
+		
 		<div class="form-group">
-			<label for="phone">Phone Number</label>
-			<input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter your Phone Number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-			 <p class="help-block">Enter In The Format 123-456-7891</p>
-		</div>
-		<div class="form-group">
-			<label for="password">Password</label>
+			<label for="password">password</label>
 			<input type="password" class="form-control" name="password" id="password" placeholder="enter the password">
 		</div>
 		
 		<input type="submit" name="submit" class="btn btn-primary" value="Register">
 	</form>
+	
 </div>
-
 	<div style="position: relative;top:600px;color: white;background-color: black; height: 300px; width: 100%;" class="container">
 		<div class="col-md-4">
 			<br><h3>About Us</h3>		
@@ -144,5 +142,6 @@
 			document.getElementById("myDropdown2").classList.toggle("show");
 		}
 	</script>
+
 </body>
 </html>
