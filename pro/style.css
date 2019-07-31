@@ -1,0 +1,48 @@
+body
+{
+	background-image: linear-gradient(rgba(0,0,0,00.6),rgba(0,0,0,0.6)),url(photo2.jpeg);
+	background-size: cover;
+	background-position: center;
+	color:black !important;
+	background-attachment:fixed;
+	
+}
+.Categories
+{
+	margin:90px auto;
+	text-align: center;
+	
+}
+/*h1{
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	font-color:black;
+
+
+}
+h1:after
+{
+	content:'';
+	background:black;
+	display:block;
+	width:150px;
+	height:3px;
+	margin: 10px auto;
+	font-size:10px;
+}*/
+.icon
+{
+	font-size:40px;
+	margin:20px auto;
+	padding:20px;
+	height:80px;
+	width:80px
+	border:1px solid white;
+	border-radius:50%;
+	color:white;
+
+}
+.col-md-3:hover{
+	box-shadow:5px 7px 9px-3px rgba(255,255,255,0.5);
+	cursor:pointer;
+}

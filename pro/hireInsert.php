@@ -14,7 +14,7 @@
   $result=mysqli_query($con,$query);
   if ($result) {
   	echo "successfully inserted";
-  	// header('location:template.html');
+  	// header('location:hireform.html');
   }
   else{
   	echo "failed to insert";
